@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Dev Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><button id="toggle-theme" class="btn-sm">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero fade-in">
+    <h1>Hello, I'm a Web Developer</h1>
+    <p>I build modern and responsive websites</p>
+    <a href="projects.html" class="btn">See My Work</a>
+  </section>
+
+  <script>
+    // Fade-in animation
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelector(".fade-in").classList.add("show");
+    });
+
+    // Dark mode toggle
+    const toggleBtn = document.getElementById("toggle-theme");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>
